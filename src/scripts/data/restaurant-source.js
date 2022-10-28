@@ -1,5 +1,5 @@
 import API_ENDPOINT from '../global/api-endpoint';
-// import CONFIG from '../global/config';
+import CONFIG from '../global/config';
 
 class RestaurantSource {
   static async listRestaurant() {
@@ -18,7 +18,7 @@ class RestaurantSource {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        // 'X-Auth-Token': CONFIG.KEY,
+        'X-Auth-Token': CONFIG.KEY,
       },
       body: JSON.stringify(data),
     });
